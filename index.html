@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="e-commerce alurageek" />
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,37 +16,47 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/btn.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
     <title>Alurageek</title>
   </head>
   <body>
     <header class="header">
       <div class="header__container">
-          <img
-            class="header__logo"
-            src="./imgs/aluraGeek-logo.png"
-            alt="Alurageek logo"
+        <img
+          class="header__logo"
+          src="./imgs/aluraGeek-logo.png"
+          alt="Alurageek logo"
+        />
+        <div class="header__searchbarWrapper">
+          <input
+            class="header__searchbar"
+            type="search"
+            name="searchbar"
+            id="searchbar"
+            placeholder="O que deseja encontrar ?"
           />
-          <div class="header__searchbarWrapper">
-            <input
-              class="header__searchbar"
-              type="search"
-              name="searchbar"
-              id="searchbar"
-              placeholder="O que deseja encontrar ?"
-            />
-            <img
-              class="header__searchbarIcon"
-              src="./imgs/search-icon.svg"
-              alt="search icon"
-            />
-          </div>
-          <button class="header__loginBtn btn" type="button" id="loginBtn">Login</button>
           <img
-            class="header__searchIcon"
-            src="./imgs/search-icon--black.svg"
+            class="header__searchbarIcon"
+            src="./imgs/search-icon.svg"
             alt="search icon"
           />
+        </div>
+        <button class="header__loginBtn btn" type="button" id="loginBtn">
+          Login
+        </button>
+        <img
+          class="header__searchIcon"
+          src="./imgs/search-icon--black.svg"
+          alt="search icon"
+        />
       </div>
     </header>
+    <div class="hero">
+      <div class="hero__container">
+        <h1 class="hero__title">Dezembro Promocional</h1>
+        <p class="hero__paragraph">Produtos selecionados com 33% de desconto</p>
+        <button class="hero__btn btn" type="button">Ver consoles</button>
+      </div>
+    </div>
   </body>
 </html>
