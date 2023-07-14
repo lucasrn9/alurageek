@@ -11,3 +11,8 @@
     font-size: 0.875rem;
     font-weight: 600;
 }
+
+.btn--filled{
+    background-color: var(--azul-100);
+    color: var(--branco-05);
+}
