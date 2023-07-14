@@ -16,3 +16,7 @@
     background-color: var(--azul-100);
     color: var(--branco-05);
 }
+
+.btn--light{
+font-weight: 400;
+}
