@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/btn.css" />
+    <link rel="stylesheet" href="./css/add-product.css" />
+    <title>Alurageek - Adicionar Produto</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <img
+          class="header__logo"
+          src="./imgs/aluraGeek-logo.png"
+          alt="Alurageek logo"
+        />
+        <div class="header__searchbarWrapper">
+          <input
+            class="header__searchbar"
+            type="search"
+            name="searchbar"
+            id="searchbar"
+            placeholder="O que deseja encontrar ?"
+          />
+          <img
+            class="header__searchbarIcon"
+            src="./imgs/search-icon.svg"
+            alt="search icon"
+          />
+        </div>
+        <button class="header__loginBtn btn" type="button" id="loginBtn">
+          Menu administrador
+        </button>
+        <img
+          class="header__searchIcon"
+          src="./imgs/search-icon--black.svg"
+          alt="search icon"
+        />
+      </div>
+    </header>
+    <main class="main">
+      <section class="addProduct">
+        <div class="addProduct__container">
+          <div class="addProduct__wrapper">
+              <h2 class="addProduct__title">Adicionar novo produto</h2>
+              <form class="addProduct__form">
+                <input
+                  class="addProduct__input"
+                  type="text"
+                  name="addProduct__url"
+                  id="addProduct__url"
+                  placeholder="URL da imagem"
+                />
+                <input
+                  class="addProduct__input"
+                  type="text"
+                  name="addProduct__categoria"
+                  id="addProduct__categoria"
+                  placeholder="Categoria"
+                />
+                <input
+                  class="addProduct__input"
+                  type="text"
+                  name="addProduct__nome"
+                  id="addProduct__nome"
+                  placeholder="Nome do produto"
+                />
+                <input
+                  class="addProduct__input"
+                  type="text"
+                  name="addProduct__preco"
+                  id="addProduct__preco"
+                  placeholder="Preço do produto"
+                />
+                <textarea
+                  class="addProduct__textArea"
+                  name="addProduct__descricao"
+                  id="addProduct__descricao"
+                  cols="30"
+                  rows="10"
+                  placeholder="Descrição do produto"
+                ></textarea>
+                <button
+                  class="add__productSubmit btn btn--filled btn--light"
+                  type="submit"
+                >
+                  Adicionar produto
+                </button>
+              </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__contact">
+        <div class="footer__contactContainer">
+          <div class="footer__info">
+            <div class="footer__logoContainer">
+              <img
+                class="footer__logo"
+                src="./imgs/aluraGeek-logo.png"
+                alt="alurageek logo"
+              />
+            </div>
+            <ul class="footer__infoList">
+              <li class="footer__infoListItem">
+                <a href="#">Quem somos nós</a>
+              </li>
+              <li class="footer__infoListItem">
+                <a href="#">Política de privacidade</a>
+              </li>
+              <li class="footer__infoListItem">
+                <a href="#">Programa de fidelidade</a>
+              </li>
+              <li class="footer__infoListItem"><a href="#">Nossas lojas</a></li>
+              <li class="footer__infoListItem">
+                <a href="#">Quero ser franqueado</a>
+              </li>
+              <li class="footer__infoListItem"><a href="#">Anuncie aqui</a></li>
+            </ul>
+          </div>
+          <div class="footer__getInContact">
+            <h3 class="footer__contactTitle">Fale conosco</h3>
+            <form class="footer__getInContactForm">
+              <input
+                class="footer__formInput"
+                type="text"
+                id="name"
+                placeholder="Nome"
+              />
+              <textarea
+                class="footer__formTextArea"
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Escreva sua mensagem"
+              ></textarea>
+              <button
+                class="footer__submitBtn btn btn--filled btn--light"
+                type="submit"
+              >
+                Enviar mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__developer">
+        <p class="footer__developerParagraph">
+          Desenvolvido por Fulana de Tal <br />2021
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
