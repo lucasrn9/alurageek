@@ -23,23 +23,8 @@
     max-width: 275px;
 }
 
-.login__formInput{
-    width: 100%;
+.login__formFieldContainer{
     height: 41px;
-    border-radius: 4px;
-    border: none;
-    font-family: 'Raleway',sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.25rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    margin-bottom: 1rem;
-}
-
-.login__formInput::placeholder{
-    color: #A2A2A2;
-    font-size: 1rem;
 }
 
 .login__submitBtn{
@@ -53,9 +38,11 @@
     .login__form{
         max-width: 423px;
     }
-    .login__formInput{
-        height: 63px;
+    .login__formField{
         margin-bottom: 1.54rem;
+    }
+    .login__formFieldContainer{
+        height: 63px;
     }
     .login__submitBtn{
         max-width: none;

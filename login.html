@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/forms.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/btn.css" />
     <link rel="stylesheet" href="./css/login.css" />
@@ -44,20 +45,32 @@
       <section class="login">
         <h2 class="login__title">Iniciar sessão</h2>
         <form class="login__form">
-          <input
-            class="login__formInput"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Escreva seu email"
-          />
-          <input
-            class="login__formInput"
-            type="text"
-            name="password"
-            id="password"
-            placeholder="Escreva sua senha"
-          />
+          <div class="form__field login__formField">
+            <div class="form__fieldContainer login__formFieldContainer">
+              <label class="form__label" for="email">Email</label>
+              <input
+                class="form__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Escreva seu email"
+              />
+            </div>
+            <span class="form__error"></span>
+          </div>
+          <div class="form__field login__formField">
+            <div class="form__fieldContainer login__formFieldContainer">
+              <label class="form__label" for="password">Email</label>
+              <input
+                class="form__input"
+                type="text"
+                name="password"
+                id="password"
+                placeholder="Escreva sua senha"
+              />
+            </div>
+            <span class="form__error"></span>
+          </div>
           <button class="login__submitBtn btn btn--filled" type="submit">
             Entrar
           </button>
@@ -93,29 +106,43 @@
             </ul>
           </div>
           <div class="footer__getInContact">
-            <h3 class="footer__contactTitle">Fale conosco</h3>
-            <form class="footer__getInContactForm">
-              <input
-                class="footer__formInput"
-                type="text"
-                id="name"
-                placeholder="Nome"
-              />
-              <textarea
-                class="footer__formTextArea"
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-                placeholder="Escreva sua mensagem"
-              ></textarea>
-              <button
-                class="footer__submitBtn btn btn--filled btn--light"
-                type="submit"
-              >
-                Enviar mensagem
-              </button>
-            </form>
+            <div class="footer__getInContactContainer">
+              <h3 class="footer__contactTitle">Fale conosco</h3>
+              <form class="form">
+                <div class="form__field">
+                  <div class="form__fieldContainer">
+                    <label class="form__label" for="nome">Nome</label>
+                    <input
+                      class="form__input"
+                      type="text"
+                      id="nome"
+                      placeholder="Nome"
+                    />
+                  </div>
+                  <span class="form__error"></span>
+                </div>
+                <div class="form__field">
+                  <div class="form__fieldContainer footer__formTextArea">
+                    <label class="form__label" for="message">Mensagem</label>
+                    <textarea
+                      class="form__textArea"
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="10"
+                      placeholder="Escreva sua mensagem"
+                    ></textarea>
+                  </div>
+                  <span class="form__error"></span>
+                </div>
+                <button
+                  class="footer__submitBtn btn btn--filled btn--light"
+                  type="submit"
+                >
+                  Enviar mensagem
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
