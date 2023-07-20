@@ -26,7 +26,12 @@ border-bottom: 0.0625rem solid var(--preto-30);
     line-height: 1rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+    padding-top: 0.5rem;
     display: none;
+}
+
+.form__labelVisible{
+    display: block;
 }
 
 .form__input::placeholder{
