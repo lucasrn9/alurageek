@@ -1,7 +1,7 @@
 import formLabelHandler from './formLabelHandler.js';
-import addFieldValidation from './addFieldValidation.js';
-import validateForm from './validateForm.js';
-import validators from './validators.js';
+import addFieldValidation from './formsValidations/addFieldValidation.js';
+import validateForm from './formsValidations/validateForm.js';
+import validators from './formsValidations/validators.js';
 
 const nomeInput = document.querySelector('#nome');
 const messageInput = document.querySelector('#message');

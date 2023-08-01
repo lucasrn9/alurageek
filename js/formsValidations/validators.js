@@ -44,7 +44,7 @@ const urlInputValidator = (url, errorSpan) => {
   if (!validateLength(url, 4, 400, 'A URL deve ter no minimo 4 characteres', 'A  deve ter no maximo 400 characteres!', errorSpan)) {
     return false;
   }
-  if (!validateUrl(url, '', errorSpan)) {
+  if (!validateUrl(url, 'URL inválida', errorSpan)) {
     return false;
   }
   return true;

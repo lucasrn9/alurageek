@@ -1,6 +1,6 @@
-import addFieldValidation from './addFieldValidation.js';
-import validateForm from './validateForm.js';
-import validators from './validators.js';
+import addFieldValidation from './formsValidations/addFieldValidation.js';
+import validateForm from './formsValidations/validateForm.js';
+import validators from './formsValidations/validators.js';
 
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
