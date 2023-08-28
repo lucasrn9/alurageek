@@ -12,15 +12,18 @@
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
+  font-style: normal;
+  line-height: normal;
 }
 
 .btn--filled {
+  font-weight: 400;
   background-color: var(--azul-100);
   color: var(--branco-05);
 }
 
-.btn--filled:hover{
-    background: var(--azul-80);
+.btn--filled:hover {
+  background: var(--azul-80);
 }
 
 .btn--light {
