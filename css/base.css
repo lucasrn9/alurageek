@@ -21,3 +21,9 @@
 html {
   min-width: 240px;
 }
+
+input:focus, textarea:focus{
+  outline: transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px black;
+}
