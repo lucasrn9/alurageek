@@ -23,11 +23,13 @@
   <body>
     <header class="header">
       <div class="header__container">
-        <img
-          class="header__logo"
-          src="./imgs/aluraGeek-logo.png"
-          alt="Alurageek logo"
-        />
+        <a href="./index.html">
+          <img
+            class="header__logo"
+            src="./imgs/aluraGeek-logo.png"
+            alt="Alurageek logo"
+          />
+        </a>
         <div class="header__searchbarWrapper">
           <input
             class="header__searchbar"
@@ -42,9 +44,13 @@
             alt="search icon"
           />
         </div>
-        <button class="header__loginBtn btn" type="button" id="loginBtn">
+        <a
+          href="./produtos.html"
+          class="header__loginBtn btn btn--light"
+          id="loginBtn"
+        >
           Menu administrador
-        </button>
+        </a>
         <img
           class="header__searchIcon"
           src="./imgs/search-icon--black.svg"
@@ -62,7 +68,7 @@
                 <div class="form__fieldContainer">
                   <label
                     class="form__label form__labelVisible"
-                    for="addProduct__input"
+                    for="addProduct__url"
                     >URL da imagem</label
                   >
                   <input
@@ -147,10 +153,7 @@
                 </div>
                 <span class="form__error"></span>
               </div>
-              <button
-                class="add__productSubmit btn btn--filled btn--light"
-                type="submit"
-              >
+              <button class="add__productSubmit btn btn--filled" type="submit">
                 Adicionar produto
               </button>
             </form>
@@ -217,10 +220,7 @@
                   </div>
                   <span class="form__error"></span>
                 </div>
-                <button
-                  class="footer__submitBtn btn btn--filled btn--light"
-                  type="submit"
-                >
+                <button class="footer__submitBtn btn btn--filled" type="submit">
                   Enviar mensagem
                 </button>
               </form>
