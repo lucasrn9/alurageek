@@ -24,20 +24,21 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container">
-        <a href="./index.html">
+      <div class="header__container" id="header__container">
+        <a href="./index.html" id="header__logoLink" hide>
           <img
             class="header__logo"
             src="./imgs/aluraGeek-logo.png"
             alt="Alurageek logo"
           />
         </a>
-        <div class="header__searchbarWrapper">
+        <div class="header__searchbarWrapper" id="header__searchbarWrapper">
           <input
             class="header__searchbar"
             type="search"
             name="searchbar"
             id="searchbar"
+            autocomplete="off"
             placeholder="O que deseja encontrar ?"
           />
           <img
@@ -45,20 +46,34 @@
             src="./imgs/search-icon.svg"
             alt="search icon"
           />
+          <div
+            class="header__searchbarResults"
+            id="header__searchbarResults"
+          ></div>
         </div>
+        <button
+          class="header__closeSearchbarBtn"
+          id="header__closeSearchbarBtn"
+        >
+          <img class="header__closeSearchBarBtnIcon" src="./imgs/close-bold-svgrepo-com.svg" alt="close button">
+        </button>
         <a
           href="./login.html"
           class="header__loginBtn btn btn--light"
           type="button"
           id="loginBtn"
+          hide
         >
           Login
         </a>
-        <img
-          class="header__searchIcon"
-          src="./imgs/search-icon--black.svg"
-          alt="search icon"
-        />
+        <button class="header__searchButton" id="header__searchButton">
+          <img
+            id="header__searchIcon"
+            class="header__searchIcon"
+            src="./imgs/search-icon--black.svg"
+            alt="search icon"
+          />
+        </button>
       </div>
     </header>
     <div class="hero">
@@ -145,6 +160,7 @@
       </div>
     </footer>
     <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/header.js"></script>
     <script type="module" src="./js/footer.js"></script>
     <script type="module" src="./js/outline.js"></script>
   </body>

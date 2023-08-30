@@ -14,20 +14,21 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container">
-        <a href="./index.html">
+      <div class="header__container" id="header__container">
+        <a href="./index.html" id="header__logoLink" hide>
           <img
             class="header__logo"
             src="./imgs/aluraGeek-logo.png"
             alt="Alurageek logo"
           />
         </a>
-        <div class="header__searchbarWrapper">
+        <div class="header__searchbarWrapper" id="header__searchbarWrapper">
           <input
             class="header__searchbar"
             type="search"
             name="searchbar"
             id="searchbar"
+            autocomplete="off"
             placeholder="O que deseja encontrar ?"
           />
           <img
@@ -35,12 +36,24 @@
             src="./imgs/search-icon.svg"
             alt="search icon"
           />
+          <div
+          class="header__searchbarResults"
+          id="header__searchbarResults"
+        ></div>
         </div>
-        <img
-          class="header__searchIcon"
-          src="./imgs/search-icon--black.svg"
-          alt="search icon"
-        />
+        <button
+        class="header__closeSearchbarBtn"
+        id="header__closeSearchbarBtn"
+      >
+        <img class="header__closeSearchBarBtnIcon" src="./imgs/close-bold-svgrepo-com.svg" alt="close button">
+      </button>
+        <button class="header__searchButton" id="header__searchButton">
+          <img
+            class="header__searchIcon"
+            src="./imgs/search-icon--black.svg"
+            alt="search icon"
+          />
+        </button>
       </div>
     </header>
     <main class="main">
@@ -138,10 +151,7 @@
                   </div>
                   <span class="form__error"></span>
                 </div>
-                <button
-                  class="footer__submitBtn btn btn--filled"
-                  type="submit"
-                >
+                <button class="footer__submitBtn btn btn--filled" type="submit">
                   Enviar mensagem
                 </button>
               </form>
@@ -156,6 +166,7 @@
       </div>
     </footer>
     <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/header.js"></script>
     <script type="module" src="./js/login.js"></script>
     <script type="module" src="./js/outline.js"></script>
   </body>
