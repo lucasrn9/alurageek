@@ -79,6 +79,114 @@
             ></div>
           </div>
         </div>
+        <div class="produtos__edit" id="produtos__edit">
+          <h2 class="produtos__editTitle">Editar</h2>
+          <button class="produtos__editCloseBtn" id="produtos__editCloseBtn">
+            <img
+              class="produtos__editCloseBtnIcon"
+              src="./imgs/close-bold-svgrepo-com.svg"
+              alt=""
+            />
+          </button>
+          <form class="addProduct__form" id="editProduct__form">
+            <div class="form__field">
+              <div class="form__fieldContainer">
+                <label
+                  class="form__label form__labelVisible"
+                  for="addProduct__url"
+                  >URL da imagem</label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  name="url"
+                  id="addProduct__url"
+                  validate
+                />
+              </div>
+              <span class="form__error"></span>
+            </div>
+
+            <div class="form__field">
+              <div class="form__fieldContainer">
+                <label
+                  class="form__label form__labelVisible"
+                  for="addProduct__categoria"
+                  >Categoria</label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  name="categoria"
+                  id="addProduct__categoria"
+                  validate
+                />
+              </div>
+              <span class="form__error"></span>
+            </div>
+
+            <div class="form__field">
+              <div class="form__fieldContainer">
+                <label
+                  class="form__label form__labelVisible"
+                  for="addProduct__nome"
+                  >Nome do produto</label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  name="nome"
+                  id="addProduct__nome"
+                  validate
+                />
+              </div>
+              <span class="form__error"></span>
+            </div>
+
+            <div class="form__field">
+              <div class="form__fieldContainer">
+                <label
+                  class="form__label form__labelVisible"
+                  for="addProduct__preco"
+                  >Preço do produto</label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  name="preco"
+                  id="addProduct__preco"
+                  validate
+                />
+              </div>
+              <span class="form__error"></span>
+            </div>
+
+            <div class="form__field">
+              <div class="form__fieldContainer addProduct__textAreaContainer">
+                <label class="form__label" for="addProduct__descricao"
+                  >Descrição do produto</label
+                >
+                <textarea
+                  class="form__textArea"
+                  name="descricao"
+                  id="addProduct__descricao"
+                  cols="30"
+                  rows="10"
+                  placeholder="Descrição do produto"
+                  validate
+                ></textarea>
+              </div>
+              <span class="form__error"></span>
+            </div>
+            <button
+              class="add__productSubmit btn btn--filled"
+              id="produtos__editBtn"
+              type="submit"
+            >
+              Editar produto
+            </button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="footer">

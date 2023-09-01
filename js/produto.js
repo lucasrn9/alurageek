@@ -4,9 +4,10 @@ const renderProducts = async () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const productId = urlParams.get('id');
-  const product = await fetchProduct(productId);
   const produtoContainer = document.querySelector('#produto__container');
-  produtoContainer.innerHTML = `
+  try {
+    const product = await fetchProduct(productId);
+    produtoContainer.innerHTML = `
 <div class="produto__card">
 <div class="produto__cardImgContainer">
   <img
@@ -24,10 +25,11 @@ const renderProducts = async () => {
 </div>
 </div>
 `;
-  const similarProducts = await fetchSimilarProducts(product.category);
-  const produtosSimilaresCards = document.querySelector('#produtosSimilares__cards');
-  similarProducts.forEach((similarProduct) => {
-    produtosSimilaresCards.innerHTML += `
+
+    const similarProducts = await fetchSimilarProducts(product.category);
+    const produtosSimilaresCards = document.querySelector('#produtosSimilares__cards');
+    similarProducts.forEach((similarProduct) => {
+      produtosSimilaresCards.innerHTML += `
     <div class="produtosSimilares__card">
               <div class="produtosSimilares__cardImgContainer">
                 <img
@@ -41,7 +43,10 @@ const renderProducts = async () => {
               <a class="produtosSimilares__cardBtn" href="../produto.html?id=${similarProduct.id}">Ver produto</a>
             </div>
     `;
-  });
+    });
+  } catch {
+    produtoContainer.innerHTML = '<h1 class="defaultError">Erro ao carregar produto </h1>';
+  }
 };
 
 renderProducts();

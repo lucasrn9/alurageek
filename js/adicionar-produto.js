@@ -25,8 +25,6 @@ addProductForm.addEventListener('submit', async (e) => {
     const { name } = input;
     const { value } = input;
     values[name] = value;
-    // eslint-disable-next-line no-param-reassign
-    input.value = '';
   });
   const postBody = {
     title: values.nome,
@@ -35,6 +33,14 @@ addProductForm.addEventListener('submit', async (e) => {
     imgUrl: values.url,
     category: values.categoria,
   };
-  await postProduct(postBody);
-  window.alert('formulario enviado!');
+  try {
+    await postProduct(postBody);
+    window.alert('formulario enviado!');
+    inputs.forEach((input) => {
+      // eslint-disable-next-line no-param-reassign
+      input.value = '';
+    });
+  } catch {
+    window.alert('Erro ao cadastrar produto');
+  }
 });

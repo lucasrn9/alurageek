@@ -43,3 +43,9 @@ export const findCategories = (products) => {
   });
   return categories;
 };
+
+export const updateProduct = async (productId, body) => {
+  const res = await fetch(`http://localhost:3000/productsAll/${productId}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  const updatedProduct = await res.json();
+  return updatedProduct;
+};

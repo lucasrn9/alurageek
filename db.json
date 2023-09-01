@@ -1,28 +1,28 @@
 {
   "productsAll": [
     {
-      "id": 1,
-      "title": "Produto XYZ",
-      "price": 60,
+      "category": "starwars",
       "description": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
       "imgUrl": "./imgs/starwars--big.png",
-      "category": "starwars"
+      "price": "60.00",
+      "title": "Produto XYZ",
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Produto XYZ",
-      "price": 60,
+      "category": "starwars",
       "description": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
       "imgUrl": "./imgs/starwarsFunko.png",
-      "category": "starwars"
+      "price": "60.00",
+      "title": "Produto XYZ",
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Produto XYZ",
-      "price": 60,
+      "category": "starwars",
       "description": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
       "imgUrl": "./imgs/starwarsJedi.png",
-      "category": "starwars"
+      "price": "60.00",
+      "title": "Produto XYZ",
+      "id": 3
     },
     {
       "id": 4,

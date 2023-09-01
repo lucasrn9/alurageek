@@ -2,12 +2,13 @@ import { fetchProductsHome, fetchProductsCategory, findCategories } from './serv
 
 const renderProducts = async () => {
   const productsContainer = document.querySelector('#products__container');
-  const products = await fetchProductsHome();
-  const categories = findCategories(products);
+  try {
+    const products = await fetchProductsHome();
+    const categories = findCategories(products);
 
-  categories.forEach((category) => {
-    const filteredProducts = products.filter((product) => product.category === category);
-    productsContainer.innerHTML += `
+    categories.forEach((category) => {
+      const filteredProducts = products.filter((product) => product.category === category);
+      productsContainer.innerHTML += `
     <section class="productsCollection" id="${category}">
     <div class="productsCollection__headers">
       <h2 class="productsCollection__title">${category}</h2>
@@ -25,10 +26,10 @@ const renderProducts = async () => {
     </div>
   </section>
     `;
-    const productsCollectionCards = document.querySelector(`#productsCollectionCards__${category.replace(' ', '-')}`);
+      const productsCollectionCards = document.querySelector(`#productsCollectionCards__${category.replace(' ', '-')}`);
 
-    filteredProducts.forEach((product) => {
-      productsCollectionCards.innerHTML += `
+      filteredProducts.forEach((product) => {
+        productsCollectionCards.innerHTML += `
         <div class="productsCollection__card">
         <div class="productsCollection__cardImgContainer">
           <img
@@ -44,8 +45,11 @@ const renderProducts = async () => {
         >
       </div>
         `;
+      });
     });
-  });
+  } catch {
+    productsContainer.innerHTML = '<h1 class="defaultError">Erro ao carregar produtos </h1>';
+  }
 };
 
 const addSeeAllProductsBtnsListeners = () => {
