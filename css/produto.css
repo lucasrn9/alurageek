@@ -132,6 +132,7 @@ display: none;
    line-height: normal; 
    padding: 0;
    cursor: pointer;
+   text-decoration: none;
 }
 
 @media screen and (min-width:768px){
