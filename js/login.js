@@ -12,6 +12,7 @@ loginForm.addEventListener('submit', (e) => {
     return;
   }
   window.alert('formulario enviado!');
+  window.location.href = 'produtos.html';
 });
 
 addFieldValidation(emailInput);
