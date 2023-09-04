@@ -1,12 +1,7 @@
 import addFieldValidation from './formsValidations/addFieldValidation.js';
 import validators from './formsValidations/validators.js';
 import validateForm from './formsValidations/validateForm.js';
-
-const postProduct = async (product) => {
-  const res = await fetch('http://localhost:3000/productsAll', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(product) });
-  const postResponse = await res.json();
-  return postResponse;
-};
+import { postProduct } from './services/products/products.services.js';
 
 const inputs = document.querySelectorAll('[validate]');
 inputs.forEach((input) => {
@@ -35,6 +30,7 @@ addProductForm.addEventListener('submit', async (e) => {
   };
   try {
     await postProduct(postBody);
+    window.location.reload();
     window.alert('formulario enviado!');
     inputs.forEach((input) => {
       // eslint-disable-next-line no-param-reassign

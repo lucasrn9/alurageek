@@ -1,13 +1,21 @@
-import { fetchProductsHome, fetchProductsCategory, findCategories } from './services/products/products.services.js';
+import { fetchProducts, fetchProductsCategory, findCategories } from './services/products/products.services.js';
+import db from '../db.js';
+
+const isLocalStorageEmpty = !localStorage.getItem('products');
+if (isLocalStorageEmpty) {
+  localStorage.setItem('products', JSON.stringify(db.productsAll));
+  localStorage.setItem('highestId', JSON.stringify(db.productsAll.length));
+}
 
 const renderProducts = async () => {
   const productsContainer = document.querySelector('#products__container');
   try {
-    const products = await fetchProductsHome();
+    const products = await fetchProducts();
     const categories = findCategories(products);
-
     categories.forEach((category) => {
       const filteredProducts = products.filter((product) => product.category === category);
+      const productsPerCategory = 6;
+      const productsToBeDisplayed = filteredProducts.slice(0, productsPerCategory);
       productsContainer.innerHTML += `
     <section class="productsCollection" id="${category}">
     <div class="productsCollection__headers">
@@ -28,7 +36,7 @@ const renderProducts = async () => {
     `;
       const productsCollectionCards = document.querySelector(`#productsCollectionCards__${category.replace(' ', '-')}`);
 
-      filteredProducts.forEach((product) => {
+      productsToBeDisplayed.forEach((product) => {
         productsCollectionCards.innerHTML += `
         <div class="productsCollection__card">
         <div class="productsCollection__cardImgContainer">
@@ -39,7 +47,7 @@ const renderProducts = async () => {
           />
         </div>
         <h3 class="productsCollection__cardName">${product.title}</h3>
-        <span class="productsCollection__cardPrice">R$ ${product.price.toFixed(2)}</span>
+        <span class="productsCollection__cardPrice">R$ ${parseFloat(product.price).toFixed(2)}</span>
         <a class="productsCollection__cardSeeProduct" href="../produto.html?id=${product.id}""
           >Ver produto</a
         >
@@ -57,7 +65,7 @@ const addSeeAllProductsBtnsListeners = () => {
   seeAllProductsBtns.forEach((btn) => {
     btn.addEventListener('click', async function seeProduct(e) {
       const productsCollectionCards = e.target.parentElement.parentElement.querySelector('.productsCollection__cards');
-      const category = e.target.id.slice(15, 1000);
+      const category = e.target.id.slice(15, 100000);
       const products = await fetchProductsCategory(category.replace(' ', ''));
       const newProducts = products.slice(6);
       newProducts.forEach((product) => {

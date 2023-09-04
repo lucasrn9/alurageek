@@ -31,6 +31,7 @@ const handleCardsActions = () => {
         if (window.confirm('Voce tem certeza que deseja deletar este produto?')) {
           try {
             await deleteProduct(productId);
+            window.location.reload();
           } catch {
             window.alert('Erro ao deletar produto');
           }
@@ -80,6 +81,7 @@ const handleEditProductFormSubmit = () => {
     let newProduct;
     try {
       newProduct = await updateProduct(productId, updateProductBody);
+      window.location.reload();
     } catch {
       newProduct = false;
     }

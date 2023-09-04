@@ -1,3 +1,5 @@
+import { searchProduct } from './services/products/products.services.js';
+
 const searchButton = document.querySelector('#header__searchButton');
 const hideElements = document.querySelectorAll('[hide]');
 const headerContainer = document.querySelector('#header__container');
@@ -46,8 +48,7 @@ const handleSearchbarProductsSearch = () => {
       if (!isSearchbarResultsVisible) {
         searchbarResults.style.display = 'flex';
       }
-      const res = await fetch(`http://localhost:3000/productsAll?q=${searchText}&_limit=3`);
-      const products = await res.json();
+      const products = await searchProduct(searchText, 3);
       if (products.length > 0) {
         const resultsCards = products.map((product) => `
           <a class="header__searchbarCardLink" href="./produto.html?id=${product.id}">

@@ -18,7 +18,7 @@ const renderProducts = async () => {
 </div>
 <div class="produto__cardInfo">
   <h2 class="produto__title">${product.title}</h2>
-  <span class="produto__price">R$ ${product.price.toFixed(2)}</span>
+  <span class="produto__price">R$ ${parseFloat(product.price).toFixed(2)}</span>
   <p class="produto__description">
     ${product.description}
   </p>
@@ -26,7 +26,7 @@ const renderProducts = async () => {
 </div>
 `;
 
-    const similarProducts = await fetchSimilarProducts(product.category);
+    const similarProducts = await fetchSimilarProducts(product.category, 6);
     const produtosSimilaresCards = document.querySelector('#produtosSimilares__cards');
     similarProducts.forEach((similarProduct) => {
       produtosSimilaresCards.innerHTML += `
@@ -39,7 +39,7 @@ const renderProducts = async () => {
                 />
               </div>
               <h3 class="produtosSimilares__cardTitle">${similarProduct.title}</h3>
-              <span class="produtosSimilares__cardPrice"> R$ ${similarProduct.price.toFixed(2)} </span>
+              <span class="produtosSimilares__cardPrice"> R$ ${parseFloat(similarProduct.price).toFixed(2)} </span>
               <a class="produtosSimilares__cardBtn" href="../produto.html?id=${similarProduct.id}">Ver produto</a>
             </div>
     `;
